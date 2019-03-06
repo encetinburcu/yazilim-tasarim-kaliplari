@@ -41,7 +41,7 @@ video::s5bUq0obhmY[youtube]
 
 Imaj Denemesi
 
-image::http://burakisci.com/wp-content/uploads/2017/02/c-dili-degiskenler-1.jpg
+image::http://burakisci.com/wp-content/uploads/2017/02/c-dili-degiskenler-1.jpg[]
 
 ## C VERİ TİPLERİ 
 
