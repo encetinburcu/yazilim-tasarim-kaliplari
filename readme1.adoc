@@ -1,0 +1,80 @@
+# C PROGRAMLAMA DİLİ
+C programlama dili (C), 1970'lerin başında Ken Thompson ve Dennis Ritchie tarafından UNIX işletim sistemi için geliştirilmiş bir programlama dilidir. C, günümüzde neredeyse tüm işletim sistemlerinde kullanılan, dünyanın en çok kullanılan sistem programlama dilidir. Ancak, uygulama programları yazmak için de çok sık kullanılır. 
+
+* C PROGRAMLAMA NEDİR?
+* C PROGRAMLAMA NERELERDE KULLANILIR?
+
+
+## C PROGRAMLAMA NEDİR?
+
+C programlama dili (C), 1970'lerin başında Ken Thompson ve Dennis Ritchie tarafından UNIX işletim sistemi için geliştirilmiş bir programlama dilidir. C, günümüzde neredeyse tüm işletim sistemlerinde kullanılan, dünyanın en çok kullanılan sistem programlama dilidir. Ancak, uygulama programları yazmak için de çok sık kullanılır. Yine çok kullanılan programlama dillerinden olan C++ da C'den türemiş bir dildir.
+##Özellikleri
+C oldukça minimalist bir dildir ve diğer pek çok programlama dilinden daha düşük düzeylidir. Çoğu zaman, C'nin düşük düzeyli bir dil olduğu ya da bir yüksek seviye assembler olduğu söylenir. Her ne kadar bazan bir yüksek düzeyli dil olduğu söylense de, gerçekte C, yalnızca assembly dillerinden daha yüksek düzeylidir. 
+
+C'nin assembly'ye göre iki önemli avantajı vardır: İlk olarak, C kaynak kodunu okuması daha kolaydır, ve özellikle uzun programlar için, yazması da çok daha zahmetsizdir. İkinci olarak, bir assembly programı genellikle yalnızca tek bir makina çeşidi üzerinde çalışabilirken, C programları (bir C derleyicisi ve gerekli kütüphaneler varsa) başka sistemlerde de çalışmak için derlenebilirler. Öte yandan, bir C programının performansı derleyicinin makina kodunu eniyileme başarısına bağlıdır, ki bu da programcının denetimi dışındadır. Assembly programlarının performansı ise doğrudan programcı tarafından belirlenir, çünkü bir assembly programı aslında bir makina dilinin insanlar tarafından daha kolay okunabilir biçimidir. Bu yüzden, bazı programların (örneğin işletim sistemlerinin) yüksek performans gerektiren bölümleri assembly ile yazılırlar. Yine de, özellikle modern mimariye sahip işlemciler için, C derleyicilerinin eniyileyerek ürettiği assembly, elle yazılmış assembly'den hızlıdır. 
+
+Benzer avantajlar ve dezavantajlar C'yi yüksek düzeyli dillerden ayırır: bir C programının verimliliği daha iyi kontrol edilebilir, ancak C programlarını yazmak ve okumak daha zordur. Yine de dikkat edilmelidir ki, C en az yüksek düzeyli diller kadar taşınabilirdir, çünkü günümüzde çoğu bilgisayar sisteminde bir C derleyicisi vardır; aslında, yüksek düzeyli dillerin pek çoğunun derleyicileri, kütüphaneleri ve yorumlayıcıları C ile yazılmışlardır. 
+
+
+### C PROGRAMLAMA NERELERDE KULLANILIR?
+* Kelime işlemciler,
+* Veri tabanı sistemleri,
+* Grafik paketleri,
+* İşletim sistemleri
+* Ağ sürücüleri
+* Tablolama yazılımları
+ 
+
+
+
+
+[IMPORTANT] 
+==== Windows, Linux ve Unix için C programlama dili kullanılarak program yazılabilir. Ayrıca C programlama dili Assembly dili ile geliştirilmiştir..
+====
+
+
+Kaynak:http://lifeacode.com/java-dersleri
+
+Youtube videosu
+
+video::s5bUq0obhmY[youtube]
+
+Imaj Denemesi
+
+image::http://burakisci.com/wp-content/uploads/2017/02/c-dili-degiskenler-1.jpg
+
+## C VERİ TİPLERİ 
+
+|=== 
+
+| VERİ TÜRÜ  |BİT GENİŞLİĞİ  | 
+
+| char | 8 
+
+| float| 32
+
+| short | 1
+
+|=== 
+
+Kod örneği
+
+[source,c++]
+----
+#include <stdio.h>
+
+int main()
+{
+printf("Hello World !");
+}
+----
+
+[source,bash]
+----
+#!/bin/bash
+echo "Hello World"
+----
+
+UML Diyagramı: http://www.plantuml.com/plantuml/png/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000
+
+
