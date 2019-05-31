@@ -1,0 +1,54 @@
+# BUİLDER DESİGN PATTERN
+
+Builder (Kurucu) Tasarım Deseni karmaşık yapıdaki nesnelerin oluşturulmasında, istemcinin nesne tipi belirterek üretimi gerçekleştirilebilmesini sağlamak için kullanılır. Bu tasarımın yapısı aşağıdaki gibidir.
+
+* Builder: Product nesnesinin oluşturulması için gereken soyut arayüzü oluşturur.
+
+* ConcreteBuilder: Product nesnesini oluşturur.
+
+* Director: Builder arayüzünü kullanarak nesne örneklemesi yapar.
+
+* Product: Üretim sonucu ortaya çıkan nesnedir. ConcreteBuilder tarafından inşa edilir.
+
+image::https://www.plantuml.com/plantuml/img/RP1D3eCW48Ntd8AbZS43k33zM_GM1d5YYHGI61PDwzqxhP8QT3O3x-LzCt0CA3t6Xs5KoiWG-5LxKEWyUp4cjDNOjaKNjUd1yve7zDeEXthkd9NAMJf7XJT9h28vh1mWbwOqukAiye1mdh4qgPHz2wE1LVufGoxTlpoZnqoV5kof8q4g_6FJ_YigMBrTQm7yZBsOeBw-KoHx0w-gPiddZX3lPhCRIz_CdH0xzbmV.png[1200,1200]
+
+[source,]
+----
+@startuml
+
+class Director
+{
+
+-init__(builder : string):string 
++constructHasta():string
++getHasta():string
+}
+
+class ConcreteBuilder
+{
++ad_ekle():string
++yas_ekle():string
++hastalik_ekle():string
+}
+class AbstractBuilder
+{
+-init__():string
++yeniHasta():string
+}
+
+
+class Hasta
+{
+-init__():string
+-str__():string
+}
+
+ConcreteBuilder ..> Hasta
+ConcreteBuilder --|> AbstractBuilder
+
+Director o--> AbstractBuilder
+
+
+
+@enduml
+----

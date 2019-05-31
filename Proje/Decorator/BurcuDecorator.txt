@@ -1,0 +1,19 @@
+@startuml
+
+
+
+class Decorated{
+  
+  
+  }
+  
+class Decorate {
+  +add():string
+  }
+  
+class Client {
+  
+  }
+
+Decorated --|> Decorate
+Decorate --|> Client

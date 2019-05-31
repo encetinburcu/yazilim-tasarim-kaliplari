@@ -1,0 +1,41 @@
+# PROTOTYPE DESİGN PATTERN
+
+Prototype tasarım paterni, büyük veri hacmine sahip nesneleri new operatörü kullanmaksızın, 'klonlama' yöntemi ile oluşturan bir tasarım desenidir. Bellekte sahip olduğu veri miktarı büyük, maliyetli ve zaman alıcı nesnelerin oluşturulması için kullanılan Prototype, bir abstract sınıf veya interface'den oluşturulabilmektedir. Prototype tasarım desenini uygulamak için aşağıda belirtilen iki kuralı uygulamak gerekir.
+
+* Nesne kopyalamak(klonlamak)
+* Klonlanan nesnenin setter metotlarını çağırmak.
+
+image::https://www.plantuml.com/plantuml/img/TL2x3i8m3Dpz5HxB8p-062h1mCWVLAQrga0UA3531Vmx8KHL2qBoS3wTppxNKIZ8pHe0qM8OTuPYv8ZgWt2lgGza0Q3D_J5uyJ9S-Gw8IZijJLCjDb62TdsYLXSQEfRAaUN2hltfZ0LFbQtnZcV2vO_eNS-o-a3fs7zh4venu-nuyFQXLBR0xoXJ_nGKQdPTViaB.png[650,650]
+
+
+
+[source,]
+----
+@startuml
+
+title Classes - Class Diagram
+
+
+class Prototype{
+  -init__():string
+  +kaydet(name:string,obj :string):string
+  +clone(name:string,*string):string
+  
+  
+}
+class Hasta{
+  -init__():string
+  +str__():string
+ 
+  
+  
+}
+Prototype<|--Hasta 
+class Prototype
+class Hasta
+
+
+
+@enduml
+
+----

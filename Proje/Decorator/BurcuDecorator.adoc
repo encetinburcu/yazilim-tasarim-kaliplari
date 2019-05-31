@@ -1,0 +1,34 @@
+# DECORATOR DESİGN PATTERN
+
+Decorator tasarım deseni, structural tasarım desenlerinden biridir. Bir nesneye dinamik olarak yeni özellikler eklemek için kullanılır. Kalıtım kullanmadan da bir nesnenin görevlerini artırabileceğimizi gösterir. 
+
+
+Bu tasarım kalıbı bir nesneye dinamik olarak yeni sorumlulukların eklenmesi ve hatta var olanların çıkartılması amacıyla kullanılır. Bir açıdan bakıldığında nesneyi kendisinden türeyen alt sınıflar ile genişletmek yerine kullanılabilen alternatif bir yaklaşım olarak düşünülebilir.
+
+
+image::https://www.plantuml.com/plantuml/img/SoWkIImgAStDuGA2v9p4uc85bzJa_AB4ajIKQYu51GYg1L6eiWeWMUt4b1GDJQlYagBCl7HKTSuvcQbv9GhLC0EuuCOgwEhMsC7DWOj3X27Q0000.png[420,420]
+
+
+[source,]
+----
+@startuml
+
+
+
+class Decorated{
+  
+  
+  }
+  
+class Decorate {
+  +add():string
+  }
+  
+class Client {
+  
+  }
+
+Decorated --|> Decorate
+Decorate --|> Client
+@enduml
+----

@@ -1,0 +1,19 @@
+@startuml
+
+
+
+class ReusablePool {
+  +init__(size:string):string
+  +acquire():string
+  +release (reusable:string):string
+  }
+  
+
+class Reusable {
+  +name:string=""
+  }
+  
+client--> Reusable
+client--> ReusablePool
+Reusable --o ReusablePool
+

@@ -1,0 +1,36 @@
+# OBJECT POOL DESİGN PATTERN
+
+Object pool,  dağıtık sistemlerde veya yazılım geliştirici tarafından yönetilmesi zor olan nesnelerde  kullanılabilecek bir tasarım desenidir. Creational (Yaratıcı, nesnelerin oluşturulmasına yönelik) desenler içerisinde yer almaktadır. İstenilen nesnelerin sürekli olarak üretilmesi yerine,  başlangıçta bir havuzu oluşturulur ve bu havuz nesneler ile doldurulur. 
+
+Bu tasarım deseninde object pool sınıfına singleton tasarım deseni uygulanır. Singleton tasarım deseni, uygulanan nesnenin bellekte tek bir kopyasının olmasını, istenildiği durumlarda aynı instance gönderilmesini sağlar. Bu tasarım desenini objcet pool sınıfına uygulayarak, nesne havuzunun tek bir kopyasının olmasını sağlıyoruz.
+
+* Reusable: Bu sınıf ise tasarım desenini uygulayacağımız nesneyi ifade etmektedir.
+* ReusablePool yeniden kullanılabilir nesneleri Client tarafından kullanılmak üzere yönetir, bir nesne havuzu oluşturur ve yönetir.
+* Client, Resauble nesnesini havuzdan talep eden geliştirici veya kullanıcıdır.
+
+image::https://www.plantuml.com/plantuml/img/SoWkIImgAStDuGA2v9p4ucA5eDJIuiIadDI0_FmSXMek1GNjpBpCalXuZUBCgbIhufAYpBnqJIWDaarCBYpDB4hLG1OhIir9JInELT0eWXg6gQyMYD6jX5YNbvWBKs-hf0HJcfoJcPfNegjh1rUDHGZaPYwuQRgw-QWoN000.png[550,550]
+
+[source,]
+----
+@startuml
+
+
+
+class ReusablePool {
+  +init__(size:string):string
+  +acquire():string
+  +release (reusable:string):string
+  }
+  
+
+class Reusable {
+  +name:string=""
+  }
+  
+client--> Reusable
+client--> ReusablePool
+Reusable --o ReusablePool
+
+
+@enduml
+----

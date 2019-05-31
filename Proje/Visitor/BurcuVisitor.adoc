@@ -1,0 +1,48 @@
+# VİSİTOR DESİGN PATTERN
+
+Uygulamada ki sınıflara yeni metotlar eklenmesini düzenleyen bir tasarım desenidir. Uygulamada ki bir yapıda ki bazı sınıflara bir işlevsellik eklenmesi gerektiğinde genelde ya yapıdaki sınıfların uyguladığı arayüzde metot tanımlanır ve bu arayüzü uygulayan sınıflarda metot yazılır veya eklenmesi gereken sınıflara eklenir. Arayüze metot tanımlarsak metodu kullanmayacak olan sınıflarda da bu metot uygulanacağı için tasarım prensiplerinden “Interface Segregation Principle - ISP” a uymamış oluruz. İlgili alt sınıflara ayrı ayrı metot eklersek de ileride bakımı zorlaşacak ve kodun karışmasına neden olacak bir yapı kurmuş oluruz. Böyle durumlarda bu hatalara düşmemek için visitor tasarım deseni kullanılabilir. 
+
+
+image::https://www.plantuml.com/plantuml/img/ZP512eCm44NtSufPAf8Bb2uijT0JT2j11mdLM99HABPtRpGnIANGLPAV_tyUazooD3nqBG0hRWdFhRIMB0g_mqB9niWE0AhbV9KkCG6Yi6pACaaFRbMwWNSmN9ujTHDaighemScehEBUOB2b1mp-ZAcMezeRrdiZTKtZyDCG0TP6n0Xn2na76hMYlpjfHi-MoeHcqbtjfkLKTqh_5q2VS4DJf3cywsTnV0dXnmOhro85e2znUJDgA4Ie15-n4I0dNRkV-m00.png[1400,1400]
+
+
+
+[source,]
+----
+@startuml
+
+title Classes - Class Diagram
+
+
+class Hasta{
+  -str__():string
+}
+class Eylem{
++accept(visitor :string): string
++tedavi(visitor :string):string
++randevu(visitor :string):string
+-str__(): string
+  
+}
+class Visitor {
+ 
+}
+class Doktor{
+  +visit(eylem :string):string
+  
+}
+class Admin{
+  +visit(eylem :string):string
+  
+}
+ class  Client {
+ 
+}
+ Eylem<|-- Hasta
+ Visitor<|--  Doktor
+ Visitor<|--  Admin
+ Visitor -- Client
+ Hasta -- Client
+
+@enduml
+----

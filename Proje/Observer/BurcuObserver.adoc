@@ -1,0 +1,36 @@
+# OBSERVER DESİGN PATTERN
+
+Observer adı üzerinde gözlemci, izleyici, gözcü yahut gözetmen diye nitelendirilen, anlamı gibi işlev gören bir tasarım desenidir. Elimizdeki mevcut nesnenin durumunda herhangi bir değişiklik olduğunda, bu değişiklerden diğer nesneleri haberdar eden bir tasarımdan bahsediyoruz. Dahada net bir şekilde bahsetmek gerekirse, elimizdeki “x” nesnesinin “y” özelliğinde bir güncellenme, değişiklik yahut belirli bir şartın gerçekleşmesi gibi bir durum cereyan ettiğinde bu “x” nesnesini -izleyen- -gözleyen- diğer “z”, “w”, “k” vs. nesnelerine bu yeni durumu bildiren sisteme Observer tasarım deseni diyoruz.
+
+image::https://www.plantuml.com/plantuml/img/ZP313e8m38RlVOeU8MOlmC6GwC6xtas52Oqmo5QCnFZkCgPaUZ1Ujgx_jwR_dpiXAqFR00XBet7Ja7FQeGeLRfagIoq05E5DGdW7HCM6vNXC3BKwSsBPL6csd-z9NP485NNIdPosLsqnmy1W-e8zLEe_8DC9dySaNLJVh6bQtD78ZdyeKOtl7MFu0JYTmTZEimUwSE_T-Kb3Nv9eJ6wBlVWZVaG2tqDW3agfTTo3N9jo3XkU.png[650,650] 
+
+
+[source,]
+----
+@startuml
+
+title Classes - Class Diagram
+
+
+class Data {
+  -init__(name:string):String
+  +attach(observer : string ):string
+  +detach(observer : string ):string
+  +notify() : string
+  +hastasayisi() : string
+  +hastasayisi(hastasayisi :string) : string
+  }
+ 
+  class HastaTakip{
+  
+  +update (x:string):string
+  }
+  
+
+
+class Data
+class HastaTakip
+Data --> HastaTakip
+@enduml
+----
+

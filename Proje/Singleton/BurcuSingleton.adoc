@@ -1,0 +1,30 @@
+# SİNGLETON DESİGN PATTERN
+
+Singleton(tek nesne) tasarım kalıbı, bir sınıfın tek bir örneğini almak için kullanılır.Amaç oluşturulan nesneye global erişim noktası sağlamaktır.Sistem çalıştığı sürece ikinci bir örnek oluşturulmaz, böylelikle istenen nesnenin tek bir defa oluşturulması garanti altına alınacaktır.Singleton nesneler ilk çağırıldıklarında bir kere oluşturulurlar ve sonraki istekler bu nesne üzerinden karşılanır.
+
+image::https://www.plantuml.com/plantuml/img/TOz12i9034NtEKN0JIlC1Ree1Ni33r3YJ2Y1wGYJk1BltbJ5rRZAV_a_2PdKgDfZom0cbXalcLHPCNmKpa9hfGq0ufklKjRCTYyp6Tr86P-0U4fEE62IQ8v1YjYoTET1hVf0_ws7vSgTtiE_7hp-ReV6mH36LZ1cuM9j4oOkwVXo1m00.png[615,615]
+
+
+
+[source,]
+----
+
+@startuml
+
+title Classes - Class Diagram
+
+
+class SingletonDatabase {
+  #data : dict
+  -init__(*:string):string
+  -str__() : string
+  
+}
+
+class SingletonDatabase
+ SingletonDatabase --> SingletonDatabase
+ client--> SingletonDatabase
+
+@enduml
+
+----

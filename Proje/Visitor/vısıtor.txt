@@ -1,0 +1,36 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class Hasta{
+  -str__():string
+}
+class Eylem{
++accept(visitor :string): string
++tedavi(visitor :string):string
++randevu(visitor :string):string
+-str__(): string
+  
+}
+class Visitor {
+ 
+}
+class Doktor{
+  +visit(eylem :string):string
+  
+}
+class Admin{
+  +visit(eylem :string):string
+  
+}
+ class  Client {
+ 
+}
+ Eylem<|-- Hasta
+ Visitor<|--  Doktor
+ Visitor<|--  Admin
+ Visitor -- Client
+ Hasta -- Client
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class HastaneFactory{
+  +olustur(string:string): string
+  
+}
+class Doktor{
+  +show(): string
+  
+}
+class Hasta {
+  +show(): string
+  
+}
+class Admin{
+  +eylem(type_:string): string
+  
+}
+ 
+ Admin <|-- Hasta
+ Admin <|-- Doktor
+ Admin --> HastaneFactory
+
+@enduml

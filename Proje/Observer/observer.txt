@@ -1,0 +1,26 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class Data {
+  -init__(name:string):String
+  +attach(observer : string ):string
+  +detach(observer : string ):string
+  +notify() : string
+  +hastasayisi() : string
+  +hastasayisi(hastasayisi :string) : string
+  }
+ 
+  class HastaTakip{
+  
+  +update (x:string):string
+  }
+  
+
+
+class Data
+class HastaTakip
+Data --> HastaTakip
+
+@enduml

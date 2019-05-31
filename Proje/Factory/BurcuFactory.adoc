@@ -1,0 +1,36 @@
+# FACTORY DESİGN PATTERN
+
+Factory Method (Fabrika metod) tasarım deseni, aynı arayüzü kullanan nesnelerin üretiminden sorumlu tasarım desenidir. Factory method tasarım deseni yapı olarak abstract factory desenine çok benzer. Factory Method tasarım deseni aynı abstract sınıfı veya arayüzü uygulayan sınıfların üretiminden sorumludur. Kullanımı 2 şekilde olabilir. Birinci kullanım şeklinde nesne üretiminden sorumlu bir class olur ve bu sınıftaki metoda gönderilen parametre ile üretilecek sınıfın türü belirlenir. İkinci kullanım şeklinde ise her nesne üretimi için aynı arayüzü kullanan sınıflar oluşturulur ve hangi sınıftan nesne istenirse belirli bir sınıfı verir.
+
+image::https://www.plantuml.com/plantuml/img/XP3R2i8m38RlynIvd4XVO8XC7E9RIDd2BFOWJOeCzTqjhLue0wzouFlp9-bOT9JaB80OiOHxgvc9KTKCUwEdg1q03AK-wgpmTD23X3ZV0N4TR699iM69nazj3QiMQv89UBx5VRXaLH7nEToQHQWuu1zeDphZ2qEp9TV8VANJiZL2fN7pKAfE_-hKfJujfRO_Dm9qvCVyeXS0.png[1300,1300]
+
+[source,]
+----
+@startuml
+
+title Classes - Class Diagram
+
+
+class HastaneFactory{
+  +olustur(string:string): string
+  
+}
+class Doktor{
+  +show(): string
+  
+}
+class Hasta {
+  +show(): string
+  
+}
+class Admin{
+  +eylem(type_:string): string
+  
+}
+ 
+ Admin <|-- Hasta
+ Admin <|-- Doktor
+ Admin --> HastaneFactory
+
+@enduml
+----

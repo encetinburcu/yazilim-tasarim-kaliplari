@@ -1,0 +1,25 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class Memento {
+  -init__(state :string) : string
+  
+
+  }
+ 
+  class uretici{
+  #state : string =""
+  +set(state:string):string
+  +savetomemento():string
+  }
+  
+
+
+class uretici
+class Memento
+uretici..> Memento
+
+@enduml
+

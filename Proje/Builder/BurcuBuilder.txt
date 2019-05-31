@@ -1,0 +1,38 @@
+@startuml
+
+
+
+class Director
+{
+
+-init__(builder : string):string 
++constructHasta():string
++getHasta():string
+}
+
+class ConcreteBuilder
+{
++ad_ekle():string
++yas_ekle():string
++hastalik_ekle():string
+}
+class AbstractBuilder
+{
+-init__():string
++yeniHasta():string
+}
+
+
+class Hasta
+{
+-init__():string
+-str__():string
+}
+
+ConcreteBuilder ..> Hasta
+ConcreteBuilder --|> AbstractBuilder
+
+Director o--> AbstractBuilder
+
+
+

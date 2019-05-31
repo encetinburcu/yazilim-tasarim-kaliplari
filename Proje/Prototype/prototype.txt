@@ -1,0 +1,26 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class Prototype{
+  -init__():string
+  +kaydet(name:string,obj :string):string
+  +clone(name:string,*string):string
+  
+  
+}
+class Hasta{
+  -init__():string
+  +str__():string
+ 
+  
+  
+}
+Prototype<|--Hasta 
+class Prototype
+class Hasta
+
+
+
+@enduml

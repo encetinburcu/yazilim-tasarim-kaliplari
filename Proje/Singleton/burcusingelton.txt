@@ -1,0 +1,17 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class SingletonDatabase {
+  #data : dict
+  -init__(*:string):string
+  -str__() : string
+  
+}
+
+class SingletonDatabase
+ SingletonDatabase --> SingletonDatabase
+ client--> SingletonDatabase
+
+@enduml

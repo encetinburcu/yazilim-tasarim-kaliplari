@@ -1,0 +1,20 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class Iterator {
+  -init__(limit :string) : string
+  -iter__() : string
+  -next__():string
+  
+  
+
+  }
+  class client
+  client--> Iterator
+ 
+
+
+
+@enduml

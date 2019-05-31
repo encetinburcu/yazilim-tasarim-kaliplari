@@ -1,0 +1,41 @@
+# MOMENTO DESİGN PATTERN
+
+Bir nesnenin tamamının veya bazı özelliklerinin tutularak sonradan tekrar elde edilmesini yöneten tasarım desenidir. Memento tasarım deseni nesnenin bir halinin kopyasını alıp sonra bu kopyanın tekrar elde edilmesini sağlar. Genelde geri al işlemi için kullanılır. Memento tasarım deseni 3 yapıdan oluşur.
+
+* Originator: Tamamının veya bazı özelliklerinin kopyasının tutulacağı nesnedir. Memento nesnesini oluşturan ve geri yüklenmesinden sorumludur.
+* Memento: Originator nesnesinin saklanacak özelliklerinin tanımlı olduğu nesne.
+* Caretaker:  Saklanacak olan memento nesnesinin referansını içinde barındıran nesnedir.
+
+image::https://www.plantuml.com/plantuml/img/LK_12eCm3BtdAuAxE4G_eB0XRDTzWnGN960hD76NuR-lQpkPXuJa9U-zf1UrGLSt0oZhJ7YRhGW9jhd2EzifM0S0O-eVvCZhWcz0RDcp3aCTDPJGY0RsqnaDvYfkG8mDCERCNWCfZ_mbdmghBEEbgYBQ26dM-ycPNQmH-o9TNBwW_fjioGeE7iTxeQ1TTzqXwCa_q-i07m00.png[800,800]
+
+
+[source,]
+----
+@startuml
+
+title Classes - Class Diagram
+
+
+class Memento {
+  -init__(state :string) : string
+  
+
+  }
+ 
+  class uretici{
+  #state : string =""
+  +set(state:string):string
+  +savetomemento():string
+  }
+  
+
+
+class uretici
+class Memento
+uretici..> Memento
+
+
+
+
+@enduml
+----

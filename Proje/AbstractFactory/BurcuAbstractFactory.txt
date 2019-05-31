@@ -1,0 +1,73 @@
+@startuml
+
+title Classes - Class Diagram
+
+
+class HastaFactory {
+  
+  +get_f()string
+}
+
+class DoktorFactory {
+  
+  +get_f()string
+}
+
+class afHasta
+{
++gorev() string 
++egitim()  string
++str__() string
+
+}
+class afDoktor
+{
++gorev() string 
++egitim()  string
++str__() string
+
+}
+class AdminFactory{
++get_f()  string
+
+}
+class Factory{
++get_f()  string
+
+}
+class afAdmin
+{
++gorev() string 
++egitim()  string
++str__() string
+}
+class Hfactory
+{
+-init__(hFactory string)string
++detaylandir()string
+
+}
+
+
+
+class afDoktor
+class HastaFactory
+class DoktorFactory
+class afHasta
+class afAdmin
+class AdminFactory
+class Hfactory
+Hfactory ..> afhastane
+Hfactory ..|> abstract
+HastaFactory..|> abstract
+AdminFactory..|> abstract
+client o-->abstract
+AdminFactory..>afAdmin
+HastaFactory..> afHasta
+
+
+DoktorFactory..> afDoktor
+DoktorFactory ..|> abstract
+
+
+@enduml
