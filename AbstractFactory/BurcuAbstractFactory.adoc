@@ -1,0 +1,86 @@
+# ABSTRACT FACTORY DESİGN PATTERN
+
+Abstract factory tasarım deseninin amacı; birbirleri ile ilişkili sınıfların oluşturulmasını düzenlemektir. Aralarında ilişki bulunan nesnelerin üretiminden sorumlu olan soyut fabrikaların tasarlandığı tasarım deseni olarak düşünülebilinir. Abstract Factory tasarım deseni sayesinde böyle durumlarda bu nesneler her oluşturulduğunda if gibi karar mekanizması yazmaya gerek kalmaz. Abstract factory deseninin uygulanabilinmesi için bu desendeki nesnelerin aynı abstract class veya interface i uygulamış olması gerekir. Bu desen üretilen nesnelerin uyguladıkları arayüzler ile ilgilendiğinden desene yeni bir nesne eklemek kolaydır. 
+
+
+image::https://www.plantuml.com/plantuml/img/fLDHQiCm3FtNAVJPOj8ZX8wLqLi4Bt5SCyS1MnkKhdUl4iSXJZOe6nZYICzFJq_sCP3qzDbP039a5RvQ6O8AMCGTdepKNdO0K8__PyadtcHDlR_Y3H1v2QseQdVxGDuu3VU4FVKV37iIBDkH6cuWTE_LrswF4O8Wb3PaEevC8H3yhQeP0aoJM6BHVzAyD9rna_21AKh63Uu9Y6n7ihy9IYJdDXPYbi8uGuov95yZDFaf6aNoQgLhZ9zD7bo6jKFRUVuqjjLqyfwsPgtrfWqU3YKVkmmaJYt3tnn_PvqSWAMOFBEiaMTgQvGZx8kY_0LT9havVJat1P2r75EJI_aTpai379Lh-F4y0000.png[1300,1800] 
+
+
+[source,]
+----
+
+@startuml
+
+title Classes - Class Diagram
+
+
+class HastaFactory {
+  
+  +get_f()string
+}
+
+class DoktorFactory {
+  
+  +get_f()string
+}
+
+class afHasta
+{
++gorev() string 
++egitim()  string
++str__() string
+
+}
+class afDoktor
+{
++gorev() string 
++egitim()  string
++str__() string
+
+}
+class AdminFactory{
++get_f()  string
+
+}
+class Factory{
++get_f()  string
+
+}
+class afAdmin
+{
++gorev() string 
++egitim()  string
++str__() string
+}
+class Hfactory
+{
+-init__(hFactory string)string
++detaylandir()string
+
+}
+
+
+
+class afDoktor
+class HastaFactory
+class DoktorFactory
+class afHasta
+class afAdmin
+class AdminFactory
+class Hfactory
+Hfactory ..> afhastane
+Hfactory ..|> abstract
+HastaFactory..|> abstract
+AdminFactory..|> abstract
+client o-->abstract
+AdminFactory..>afAdmin
+HastaFactory..> afHasta
+
+
+DoktorFactory..> afDoktor
+DoktorFactory ..|> abstract
+
+
+@enduml
+----
+
